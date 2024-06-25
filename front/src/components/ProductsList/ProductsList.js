@@ -64,7 +64,7 @@ function ProductsList({ title }) {
   useEffect(() => {
     const fetchList = async () => {
       try {
-        const res = await axios.get("http://localhost:8811/");
+        const res = await axios.get("http://localhost:8810/");
         setList(res.data);
       } catch (err) {
         console.log(err);
@@ -78,11 +78,11 @@ function ProductsList({ title }) {
     <section className="productList">
       <div className="productList__container">
         <h2 className="productList__title">{title}</h2>
-        <div className="productList__cardsContainer">
+      {/* <div className="productList__cardsContainer">
           {productsList.map((item) => (
             <ProductCard {...item} key={item.id} />
           ))}
-        </div>
+        </div> */}
         <div className="productList__btnWrapper">
           <Button
             className="productList__btn"
